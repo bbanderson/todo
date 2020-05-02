@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+/* Greeting Section */
+
+.greeting {
+    padding: 7% 15% 30px;
+}
+
+.greeting h2 {
+    display: inline;
+}
+
+.greeting button {
+    font-size: 10px;
+    outline: none;
+}
