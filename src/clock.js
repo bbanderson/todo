@@ -6,7 +6,7 @@ const DATE = DATE_CONTAINER.querySelector("h3");
 function paintTime() {
     const TIME = new Date();
     CLOCK.innerHTML = 
-    `${TIME.getHours()} : ${TIME.getMinutes() < 10 ? `0${TIME.getMinutes()}` : TIME.getMinutes()} : ${TIME.getSeconds() < 10 ? `0${TIME.getSeconds()}` : TIME.getSeconds()}`;
+    `${TIME.getHours() < 10 ? `0${TIME.getHours()}` : TIME.getHours()} : ${TIME.getMinutes() < 10 ? `0${TIME.getMinutes()}` : TIME.getMinutes()} : ${TIME.getSeconds() < 10 ? `0${TIME.getSeconds()}` : TIME.getSeconds()}`;
     DATE.innerHTML = `${TIME.getFullYear()} . ${TIME.getMonth()+1} . ${TIME.getDate()}`;
        
 }

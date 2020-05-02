@@ -9,6 +9,7 @@ const NAME_STORAGE = "name";
 function setName() {
     localStorage.setItem(NAME_STORAGE, INPUT.value)
     greet(INPUT.value)
+    INPUT.value = ""
 }
 
 function handleSubmit(e) {
@@ -18,6 +19,9 @@ function handleSubmit(e) {
 
 function handleChangeName(e) {
     localStorage.removeItem(NAME_STORAGE);
+    NAME_CONTAINER.classList.remove("hide");
+    NAME_CHANGE_BTN.classList.add("hide")
+    GREET.classList.add("hide");
     location.reload()
 }
 
@@ -32,6 +36,7 @@ function loadData() {
     if (data !== null) {
         greet(data);
     } else {
+        
         NAME_CHANGE_BTN.classList.add("hide")
     }
 }
