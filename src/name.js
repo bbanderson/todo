@@ -1,6 +1,6 @@
-const TIME = document.querySelector(".js-clock h1")
+// const TIME = document.querySelector(".js-clock h1")
 const GREET = document.querySelector(".js-greeting").querySelector("h2")
-const NAME_CHANGE_BTN = document.querySelector(".js-greeting button")
+const NAME_CHANGE_BTN = document.querySelector(".js-greeting i")
 const NAME_CONTAINER = document.querySelector(".js-name");
 const FORM = NAME_CONTAINER.querySelector("form");
 const INPUT = NAME_CONTAINER.querySelector("input");

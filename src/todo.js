@@ -1,4 +1,4 @@
-const list = document.querySelector(".js-todo ul");
+const list = document.querySelector("ul");
 const form = document.querySelector(".js-todo form");
 const userInput = form.querySelector("input");
 const TODO_STORAGE = "todos";
@@ -28,10 +28,11 @@ function handleDelete(e) {
 
 function paintList(text) {
     const todo = document.createElement("li");
-    const button = document.createElement("button");
+    const button = document.createElement("i");
     const id = todoList.length + 1
     todo.id = id
-    button.innerText = "❌";
+    button.classList.add("fas")
+    button.classList.add("fa-check-circle")
     button.addEventListener("click", handleDelete)
     todo.innerText = text;
     todo.appendChild(button);
