@@ -247,6 +247,24 @@ li {
     font-size: 2rem;
 }
 
+#pending {
+    position: absolute;
+    background-color: red;
+    left: 50px;
+    width: 35%;
+    height: 30%;
+}
+
+#finished {
+    position: absolute;
+    background-color: blue;
+    right: 50px;
+    width: 35%;
+    height: 30%;
+}
+
+
+
 /* Flicker Effect */
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
