@@ -5,10 +5,20 @@ const DATE = DATE_CONTAINER.querySelector("h3");
 
 function paintTime() {
     const TIME = new Date();
+    const HOURS = TIME.getHours()
+    const MIN = TIME.getMinutes()
+    const SEC = TIME.getSeconds()
+    const YEAR = TIME.getFullYear()
+    const MONTH = TIME.getMonth()
+    const DAY = TIME.getDate()
+    
+
+    if (SEC >= 50) { CLOCK.classList.add("red") } else { CLOCK.classList.remove("red") }
+   
+    
     CLOCK.innerHTML = 
-    `${TIME.getHours() < 10 ? `0${TIME.getHours()}` : TIME.getHours()} : ${TIME.getMinutes() < 10 ? `0${TIME.getMinutes()}` : TIME.getMinutes()} : ${TIME.getSeconds() < 10 ? `0${TIME.getSeconds()}` : TIME.getSeconds()}`;
-    DATE.innerHTML = `${TIME.getFullYear()} . ${TIME.getMonth()+1} . ${TIME.getDate()}`;
-       
+    `${HOURS < 10 ? `0${HOURS}` : HOURS} : ${MIN < 10 ? `0${MIN}` : MIN} : ${SEC < 10 ? `0${SEC}` : SEC}`;
+    DATE.innerHTML = `${YEAR} . ${MONTH + 1} . ${DAY}`;
 }
 
 setInterval(paintTime,1000);

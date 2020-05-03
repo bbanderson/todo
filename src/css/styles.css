@@ -1,17 +1,35 @@
 /* Global Section */
 
+
+@keyframes magnify {
+    from {
+        font-size: 1rem;
+        line-height: 1;
+    } to {
+        font-size: 3rem;
+        line-height: 3;
+    }
+}
+
+@keyframes flick {
+    from {
+        color: #fff;
+    } to {
+        color: #e43f5a;
+    }
+}
+
 body {
-    /* width: 100%; */
-    /* height: 100%; */
     text-align: center;
     position: relative;
     display: contents;
     font-family: "Montserrat";
+    animation: fadeIn 1s linear;
 }
 
-h1, h2, h3, li, .weather-container {
+h1, h2, h3, li, .weather-container, span {
     color: #fff;
-    text-shadow: 3px 5px 3px rgba(128, 128, 128, 0.8);
+    text-shadow: 3px 5px 3px rgba(44, 44, 44, 0.8);
 }
 
 h1 {
@@ -25,7 +43,6 @@ h2 {
 }
 
 .date {
-    /* width: 100%; */
     margin: auto;
     padding-left: 0;
     padding-right: 0;
@@ -48,17 +65,6 @@ input {
 input[placeholder] {
     text-align-last: center;
     letter-spacing: 3px;
-}
-
-
-@keyframes magnify {
-    from {
-        font-size: 1rem;
-        line-height: 1;
-    } to {
-        font-size: 3rem;
-        line-height: 3;
-    }
 }
 
 input:hover {
@@ -93,6 +99,11 @@ input:hover {
     opacity: 0.8;
 }
 
+.weather-container img:hover {
+    opacity: 1;
+    transform: scale();
+}
+
 /* Ask Name */
 .name {
     margin-top: 7%;
@@ -123,6 +134,28 @@ input:hover {
     padding: 10px 30px;
     margin: 0 auto;
     width: 33%;
+}
+
+.red {
+    color: #e43f5a;
+}
+
+.quarter {
+    color: #e1a55c;
+}
+
+.half {
+    color: #c76049;
+}
+
+.three-quarter {
+    color: #cb4444;
+}
+
+.emergency {
+    animation: magnify .5s reverse;
+    color: #ee2c2c;
+
 }
 
 /* Image */
@@ -190,7 +223,7 @@ li {
 .todo input[placeholder] {
     text-align-last: center;
     color:#000;
-    background-color: #ffacb793;
+    background-color: #fff;
     text-shadow: 3px 5px 3px rgba(128, 128, 128, 0.8);
     font-family: 'Montserrat', sans-serif;
     letter-spacing:10px;
@@ -300,6 +333,20 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
     opacity:1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
+}
+
+
+/* Change Image */
+.change-img {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #fff;
+    width: 100px;
+}
+
+.change-img {
+    display: inline;
 }
 
 @media (max-width: 800px) {
