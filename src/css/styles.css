@@ -221,7 +221,7 @@ img {
 }
 
 ul {
-    padding: 7%;
+    padding: 0;
     list-style: none;
     position: relative;
 }
@@ -238,7 +238,16 @@ i {
 
 .fa-check-circle {
     color: greenyellow;
-    cursor: pointer;
+    padding-left: 10px;
+}
+
+.fa-times-circle {
+    color: #f43127;
+    padding-left: 10px;
+}
+
+.fa-undo-alt {
+    color: royalblue;
     padding-left: 10px;
 }
 
@@ -249,20 +258,49 @@ li {
 
 #pending {
     position: absolute;
-    background-color: red;
-    left: 50px;
+    border: 1px solid;
+    border-radius: 30px;
+    /* background-color: red; */
+    left: 100px;
     width: 35%;
     height: 30%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+}
+
+#pending span {
+    position: absolute;
+    left: -5%;
+    top: 3%;
+    transform: rotate(-28deg);
+    background-color: #000;
+    padding: 1% 5%;
+    border-radius: 20px;
 }
 
 #finished {
     position: absolute;
-    background-color: blue;
-    right: 50px;
+    border: 1px solid;
+    border-radius: 30px;
+    /* background-color: blue; */
+    right: 100px;
     width: 35%;
     height: 30%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
 }
 
+#finished span {
+    position: absolute;
+    left: -5%;
+    top: 3%;
+    background-color: #000;
+    padding: 1% 5%;
+    transform: rotate(-28deg);
+    border-radius: 20px;
+}
 
 
 /* Flicker Effect */
