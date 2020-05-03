@@ -1,4 +1,4 @@
-const CHANGE_IMG_BTN = document.querySelector(".js-change-img i")
+const CHANGE_IMG_BTN = document.querySelector(".js-change-img button")
 const CURRENT_IMG_CATEGORY = document.querySelector(".js-change-img span")
 
 const USER_IMG_STORAGE = "image_category"
@@ -8,7 +8,7 @@ function save(text) {
 }
 
 function handleImg() {
-    const preference = prompt("Background Image Configuration! Which Category do you want to choose?");
+    const preference = prompt("Background Image Configuration! Which Category do you want to choose?", `${localStorage.getItem(USER_IMG_STORAGE)}`);
     if (preference !== null) {
         save(preference);
         getImage(preference);
