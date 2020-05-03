@@ -1,10 +1,15 @@
-const image_count = 3;
+const IMG_SRC = "https://pixabay.com/api/?key=16348363-5f62afc96e1c40cb93593dede&q=landscape&image_type=photo"
 
-function loadImage() {
-    const IMG = new Image()
-    IMG.src = `./src/images/${Math.floor(Math.random() * image_count) + 1}.jpg`
-    console.log(IMG)
-    document.querySelector("body").prepend(IMG)
+function getImage() {
+    fetch(IMG_SRC).then(response => {
+        response.json().then(result => {
+            const source = result.hits[Math.floor(Math.random()*(result.hits.length))].largeImageURL
+            const IMG = new Image();
+            IMG.src = `${source}`;
+            IMG.alt = "background-image";
+            document.querySelector("body").prepend(IMG);
+        })
+    })
 }
 
-loadImage()
+getImage();
