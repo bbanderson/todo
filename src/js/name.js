@@ -19,16 +19,16 @@ function handleSubmit(e) {
 
 function handleChangeName(e) {
     localStorage.removeItem(NAME_STORAGE);
-    NAME_CONTAINER.classList.remove("hide");
-    NAME_CHANGE_BTN.classList.add("hide")
-    GREET.classList.add("hide");
+    NAME_CONTAINER.classList.remove("noshow");
+    NAME_CHANGE_BTN.classList.add("noshow")
+    GREET.classList.add("noshow");
     location.reload()
 }
 
 function greet(name) {
     GREET.innerHTML = `Hello, ${name}!`
-    NAME_CONTAINER.classList.add("hide");
-    NAME_CHANGE_BTN.classList.remove("hide")
+    NAME_CONTAINER.classList.add("noshow");
+    NAME_CHANGE_BTN.classList.remove("noshow")
 }
 
 function loadData() {
@@ -37,7 +37,7 @@ function loadData() {
         greet(data);
     } else {
         
-        NAME_CHANGE_BTN.classList.add("hide")
+        NAME_CHANGE_BTN.classList.add("noshow")
     }
 }
 

@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/52cfe5b466.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     <title>MOMONTOM</title>
 </head>
 <body>
+    <!-- 이름묻기구현 -->
+    <div class="js-name name">
+        <form action="">
+            <input type="text" placeholder="Hit your name..!">
+        </form>
+    </div>
     <!-- 시간에 따른 다른 인사말 -->
     <div class="js-greeting greeting">
         <h2></h2><i class="fas fa-sync-alt"></i>
@@ -22,28 +28,22 @@
     <div class="js-date date">
         <h3>please wait...</h3>
     </div>
-    <!-- 이름묻기구현 -->
-    <div class="js-name name">
-        <form action="">
-            <input type="text" placeholder="Hit your name..!">
-        </form>
-    </div>
     <!-- 투두구현 -->
     <div class="js-todo todo">
         <form action="" class="js-todo-form">
-            <input type="text" placeholder="here's your challenge">
+            <input type="text" placeholder="Hit your challenges..!">
         </form>
     </div>
     <ul></ul>
     <!-- 배경 -->
     <!-- gps -->
 
-    <script src="src/jquery-3.1.0.min.js"></script>
-    <script src="src/index.js"></script>
-    <script src="src/clock.js"></script>
-    <script src="src/name.js"></script>
-    <script src="src/todo.js"></script>
-    <script src="src/image.js"></script>
+    <script src="src/js/jquery-3.1.0.min.js"></script>
+    <script src="src/js/index.js"></script>
+    <script src="src/js/clock.js"></script>
+    <script src="src/js/name.js"></script>
+    <script src="src/js/todo.js"></script>
+    <script src="src/js/image.js"></script>
 
 </body>
 </html>
