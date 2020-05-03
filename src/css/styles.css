@@ -142,10 +142,9 @@ input:hover {
     position: relative;
     bottom: 5px;
     border-radius: 100%;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
 }
-
 
 /* Ask Name */
 .name {
@@ -224,6 +223,7 @@ ul {
     padding: 0;
     list-style: none;
     position: relative;
+    height: 35px;
 }
 
 button {
@@ -254,6 +254,7 @@ i {
 /* Todo List */
 li {
     font-size: 2rem;
+    margin-bottom: 15px;
 }
 
 .row {
@@ -532,6 +533,11 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
         width: 50px;
         height: 50px;
     }
+
+    .change-img span {
+        font-size: 0.8rem;
+    }
+
     .row {
         margin: 0 auto;
         width: 100%;
@@ -647,7 +653,7 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
         position: relative;
         bottom: 70px;
         font-size: 1rem;
-        width: 80px;
+        width: 90px;
     }
 
     .change-img {

@@ -88,6 +88,12 @@ function paintList(text) {
         text: text,
     }
     todoList.push(obj);
+    if (typeOf(text) !== String) {
+        const text = document.createElement("p");
+        text.innerText = "There's nothing."
+        list.appendChild(text);
+    }
+    
     saveTodo(todoList)
 }
 
