@@ -8,7 +8,7 @@ function save(text) {
 }
 
 function handleImg() {
-    const preference = prompt("Background Image Configuration! Which Category do you want to choose?", `${localStorage.getItem(USER_IMG_STORAGE)}`);
+    const preference = prompt("Background Image Configuration! Which Category do you want to choose?", "landscape");
     if (preference !== null) {
         save(preference);
         getImage(preference);
