@@ -1,6 +1,6 @@
 const list = document.getElementById("pending");
 const finishedUList = document.getElementById("finished");
-const form = document.querySelector(".js-todo form");
+const form = document.querySelector(".js-todo-form");
 const userInput = form.querySelector("input");
 const TODO_STORAGE = "todos";
 const FINISHED_STORAGE = "finished";
@@ -18,7 +18,8 @@ function saveFinishedList(obj) {
 
 function handleSubmit(e) {
     e.preventDefault();
-    paintList(userInput.value)
+    const text = userInput.value;
+    paintList(text)
     userInput.value = "";
 }
 
@@ -88,11 +89,6 @@ function paintList(text) {
         text: text,
     }
     todoList.push(obj);
-    if (typeOf(text) !== String) {
-        const text = document.createElement("p");
-        text.innerText = "There's nothing."
-        list.appendChild(text);
-    }
     
     saveTodo(todoList)
 }
