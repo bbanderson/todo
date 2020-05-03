@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="js-weather weather-container row">
+        <div class="js-weather weather-container">
             <div class="weather-text">
                 <span class="city"></span>
                 <br>
@@ -46,13 +46,15 @@
                 <input type="text" placeholder="Hit your challenges..!">
             </form>
         </div>
-        <div id="pending">
-            <span>pending</span>
-            <ul></ul>
-        </div>
-        <div id="finished">
-            <span>finished</span>
-            <ul></ul>
+        <div class="card-deck">
+            <div id="pending" class="col-lg-6 col-md-8 col-sm-12">
+                <span>pending</span>
+                <ul></ul>
+            </div>
+            <div id="finished" class="col-lg-6 col-md-8 col-sm-12">
+                <span>finished</span>
+                <ul></ul>
+            </div>
         </div>
     </div>
 

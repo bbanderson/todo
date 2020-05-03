@@ -256,17 +256,23 @@ li {
     font-size: 2rem;
 }
 
+.row {
+    margin: 0 auto;
+    width: 100%;
+}
+
 #pending {
-    position: absolute;
+    /* position: absolute; */
     border: 1px solid;
     border-radius: 30px;
     /* background-color: red; */
-    left: 100px;
+    /* left: 100px; */
     width: 35%;
     height: 30%;
     overflow-x: hidden;
     overflow-y: auto;
     list-style: none;
+    right: 100px;
 }
 
 #pending span {
@@ -280,16 +286,17 @@ li {
 }
 
 #finished {
-    position: absolute;
+    /* position: absolute; */
     border: 1px solid;
     border-radius: 30px;
     /* background-color: blue; */
-    right: 100px;
+    /* right: 100px; */
     width: 35%;
     height: 30%;
     overflow-x: hidden;
     overflow-y: auto;
     list-style: none;
+    left: 100px;
 }
 
 #finished span {
@@ -449,7 +456,7 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
     display: inline;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1900px) {
     h1 {
         font-size: 4rem;
     }
@@ -466,8 +473,8 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
         padding-right: 0;
     }
 
-    .todo li {
-        font-size: 1.2rem;
+    li {
+        font-size: 1.8rem;
     }
 
     .todo input[placeholder] {
@@ -525,10 +532,68 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
         width: 50px;
         height: 50px;
     }
+    .row {
+        margin: 0 auto;
+        width: 100%;
+    }
 
+    #pending {
+        /* position: absolute; */
+        display: block;
+        border: 1px solid;
+        border-radius: 30px;
+        /* background-color: red; */
+        margin: 0 auto 30px;
+        /* left: 0; */
+        right: 20px;
+        width: 60%;
+        height: 30%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        list-style: none;
+    }
+    
+    #pending span {
+        position: absolute;
+        display: block;
+        left: -5%;
+        top: 3%;
+        transform: rotate(-28deg);
+        background-color: #000;
+        padding: 1% 5%;
+        border-radius: 20px;
+    }
+    
+    #finished {
+        /* position: absolute; */
+        border: 1px solid;
+        border-radius: 30px;
+        margin: 0 auto;
+        /* background-color: blue; */
+        left: 20px;
+        /* right: 100px; */
+        width: 60%;
+        height: 30%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        list-style: none;
+    }
+    
+    #finished span {
+        position: absolute;
+        left: -5%;
+        top: 3%;
+        background-color: #000;
+        padding: 1% 5%;
+        transform: rotate(-28deg);
+        border-radius: 20px;
+    }
 }
 
-@media (max-width: 400px) {
+
+
+
+@media (max-width: 1000px) {
     h1 {
         font-size: 3rem;
     }
@@ -543,10 +608,6 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
     .date {
         padding-left: 0;
         padding-right: 0;
-    }
-
-    .todo li {
-        font-size: 1.1rem;
     }
 
     .todo input[placeholder] {
@@ -602,6 +663,69 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
         bottom: 5px;
         width: 40px;
         height: 40px;
+    }
+
+    .row {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #pending {
+        /* position: absolute; */
+        font-size: 0.5rem;
+        display: block;
+        border: 1px solid;
+        border-radius: 30px;
+        /* background-color: red; */
+        margin: 0 auto 30px;
+        left: 0;
+        right: 0;
+        width: 60%;
+        height: 30%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        list-style: none;
+    }
+
+    li {
+        font-size: 1.5rem;
+    }
+    
+    #pending span {
+        position: absolute;
+        display: block;
+        left: -5%;
+        top: 3%;
+        transform: rotate(-28deg);
+        background-color: #000;
+        padding: 1% 5%;
+        border-radius: 20px;
+    }
+    
+    #finished {
+        /* position: absolute; */
+        font-size: 0.5rem;
+        border: 1px solid;
+        border-radius: 30px;
+        margin: 0 auto;
+        /* background-color: blue; */
+        left: 0;
+        right: 0;
+        width: 60%;
+        height: 30%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        list-style: none;
+    }
+    
+    #finished span {
+        position: absolute;
+        left: -5%;
+        top: 3%;
+        background-color: #000;
+        padding: 1% 5%;
+        transform: rotate(-28deg);
+        border-radius: 20px;
     }
 
 }
