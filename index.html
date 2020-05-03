@@ -7,35 +7,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/styles.css">
-    <title>MOMONTOM</title>
+    <title>Todo App :: For your productivity</title>
 </head>
 <body>
-    <!-- 이름묻기구현 -->
-    <div class="js-name name">
-        <form action="">
-            <input type="text" placeholder="Hit your name..!">
-        </form>
+    <div class="container">
+        <div class="js-weather weather-container row">
+            <div class="weather-text">
+                <span class="city"></span>
+                <br>
+                <span class="temperature"></span>
+                <br>
+            </div>
+            <div class="weather-icon">
+                <span class="weather"></span>
+            </div>
+        </div>
+        <!-- 이름묻기구현 -->
+        <div class="js-name name">
+            <form action="">
+                <input type="text" placeholder="Hit your name..!">
+            </form>
+        </div>
+        <!-- 시간에 따른 다른 인사말 -->
+        <div class="js-greeting greeting">
+            <h2></h2><i class="fas fa-sync-alt"></i>
+        </div>
+        <!-- 시간표시 -->
+        <div class="js-clock clock">
+            <h1>loading...</h1>
+        </div>
+        <!-- 날짜표시 -->
+        <div class="js-date date">
+            <h3>please wait...</h3>
+        </div>
+        <!-- 투두구현 -->
+        <div class="js-todo todo">
+            <form action="" class="js-todo-form">
+                <input type="text" placeholder="Hit your challenges..!">
+            </form>
+        </div>
+        <ul></ul>
     </div>
-    <!-- 시간에 따른 다른 인사말 -->
-    <div class="js-greeting greeting">
-        <h2></h2><i class="fas fa-sync-alt"></i>
-    </div>
-    <!-- 시간표시 -->
-    <div class="js-clock clock">
-        <h1>loading...</h1>
-    </div>
-    <!-- 날짜표시 -->
-    <div class="js-date date">
-        <h3>please wait...</h3>
-    </div>
-    <!-- 투두구현 -->
-    <div class="js-todo todo">
-        <form action="" class="js-todo-form">
-            <input type="text" placeholder="Hit your challenges..!">
-        </form>
-    </div>
-    <ul></ul>
-    
     <script src="src/js/jquery-3.1.0.min.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/clock.js"></script>

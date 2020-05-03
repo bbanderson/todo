@@ -9,7 +9,7 @@ body {
     font-family: "Montserrat";
 }
 
-h1, h2, h3, li {
+h1, h2, h3, li, .weather-container {
     color: #fff;
     text-shadow: 3px 5px 3px rgba(128, 128, 128, 0.8);
 }
@@ -22,6 +22,13 @@ h1 {
 h2 {
     font-size: 3rem;
     font-family: 'Montez', cursive;
+}
+
+.date {
+    /* width: 100%; */
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .hide {
@@ -58,6 +65,33 @@ input:hover {
     animation: magnify 1s reverse;
 }
 
+/* Weather Section */
+.weather-container {
+    text-align: left;
+    position: absolute;
+    left: 45px;
+    bottom: 15px;
+    text-shadow: none;
+    color: #d1d1e2;
+    z-index: 1;
+}
+
+.weather-text {
+    margin: auto;
+    font-size: 1rem;
+}
+
+.weather-text .city {
+    font-size: 1.2rem;
+}
+
+.weather-container img {
+    position: static;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    opacity: 0.8;
+}
 
 /* Ask Name */
 .name {
@@ -263,4 +297,33 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
     opacity:1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;     
+    }
+
+    .date {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .todo li {
+        font-size: 1.2rem;
+    }
+
+    .todo input[placeholder] {
+        letter-spacing: normal;
+        font-size: 0.7rem;
+    }
+
+
 }
